@@ -2,28 +2,31 @@ import Hero from "./sections/Hero";
 import Services from "./sections/Services";
 import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
-import Header from "./components/Navbar"; // or Navbar if that's what you named it
+import Header from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./index.css";
 
 function App() {
   return (
     <>
       <Header />
-      <main className="pt-20">
-        {" "}
+      <main className="mt-4 bg-orange-50">
         {/* Adds space below fixed header */}
         <div className="font-sans">
           <Hero />
-          <div className="bg-gray-500 py-12">
+
+          <div id="services">
             <Services />
           </div>
 
-          <div className="bg-orange-50 py-12">
+          <div id="testimonials">
             <Testimonials />
           </div>
-          <Contact />
+
+          <div id="contact">
+            <Contact />
+          </div>
         </div>
-        {/* All your current landing page sections go here */}
       </main>
       <Footer />
     </>

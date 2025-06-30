@@ -18,14 +18,14 @@ const ContactForm = () => {
 
   return (
     <section className="bg-orange-50 py-16">
-      <div className="bg-white p-8 border border-gray-300 rounded-2xl shadow-md w-full max-w-xl mx-auto">
+      <div className="bg-white p-6 border border-gray-300 rounded-2xl shadow-lg w-full max-w-xl mx-auto">
         {!submitted ? (
           <form onSubmit={handleSubmit} className="space-y-6">
             <input
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-800"
               placeholder="Your Name"
               required
             />
@@ -34,7 +34,7 @@ const ContactForm = () => {
               type="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-800"
               placeholder="Your Email"
               required
             />
@@ -42,15 +42,15 @@ const ContactForm = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-3 border border-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Your Message"
               rows={5}
+              className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 text-gray-800"
+              placeholder="Your Message"
               required
             />
-            <button className="bg-yellow-400 hover:bg-orange-400 text-white font-semibold py-2 px-6 rounded shadow transition duration-300">Send Message</button>
+            <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-xl shadow transition duration-300">Send Message</button>
           </form>
         ) : (
-          <div className="text-center text-green-700 font-semibold text-lg">🎉 Thanks for reaching out! We'll get back to you within 24–48 hours.</div>
+          <div className="text-center text-yellow-600 font-semibold text-lg">Thanks for reaching out! We’ll get back to you within 24–48 hours.</div>
         )}
       </div>
     </section>

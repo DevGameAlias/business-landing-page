@@ -1,24 +1,22 @@
+import React from "react";
 import electricalImg from "../assets/images/Electricalreference.jpg";
 import houseworkImg from "../assets/images/HouseworkReference.jpg";
 import toolbeltImg from "../assets/images/toolbelt.jpg";
 import workshopImg from "../assets/images/Workshopreference1.jpg";
 
-const sectionHeaderStyle = "text-3xl font-bold text-center mb-8 text-yellow-600 tracking-wide";
-
 const Hero = () => {
   return (
-    <div className="">
+    <div className="w-full pt-24">
       {/* Hero */}
-      <section className="w-full relative">
-        <img src={electricalImg} alt="Electrical work" className="w-full h-96 object-cover" />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-extrabold text-center text-yellow-600 px-4 drop-shadow-lg tracking-wide">Reliable Handyman Services for Every Project</h1>
-        </div>
+      <section className="relative h-[400px] bg-cover bg-center" style={{ backgroundImage: `url(${electricalImg})` }}>
+        <div className="absolute inset-0 bg-black/80"></div>
+        <h1 className="relative z-10 text-3xl md:text-4xl font-bold text-yellow-400 text-center pt-24 drop-shadow-lg">Reliable Handyman Services for Every Project</h1>
       </section>
 
       {/* Services */}
-      <section className="py-12 px-4 md:px-12 bg-gray-100">
+      <section className="bg-orange-50 py-12 px-4 md:px-12 bg-gray-100">
         <h2 className="text-3xl font-bold text-center mb-8 text-yellow-600 tracking-wide">Our Services</h2>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Service 1 */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden">

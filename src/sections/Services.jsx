@@ -1,3 +1,4 @@
+import React from "react";
 import ElectricIcon from "../assets/icons/electric-icon.svg";
 import PaintIcon from "../assets/icons/paint-spray-icon.svg";
 import SawIcon from "../assets/icons/saw-icon.svg";
@@ -40,13 +41,18 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="bg-gray-100 py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+    <section className="bg-orange-50 py-16">
+      <h2 className="text-2xl md:text-3xl font-bold text-center text-yellow-600 mb-10 tracking-wide">More Services</h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center flex flex-col items-center">
-            <img src={service.icon} alt={`${service.title} icon`} className="h-12 w-12 mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">{service.title}</h3>
-            <p className="text-gray-600 text-sm">{service.desc}</p>
+          <div
+            key={index}
+            className="group bg-white p-6 rounded-xl border border-transparent hover:border-yellow-400 hover:shadow-xl hover:scale-[1.02] transform transition duration-300 ease-in-out text-center"
+          >
+            <img src={service.icon} alt={`${service.title} icon`} className="w-12 h-12 mx-auto mb-4 transition duration-300 group-hover:scale-110 group-hover:brightness-110" />
+            <h3 className="text-lg font-semibold mb-1">{service.title}</h3>
+            <p className="text-sm text-gray-600">{service.desc}</p>
           </div>
         ))}
       </div>
