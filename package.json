@@ -2,12 +2,15 @@
   "name": "business-landing-page",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://DevGameAlias.github.io/business-landing-page",
+
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -20,7 +23,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+ "deploy": "gh-pages -d \"build\""
+
   },
   "eslintConfig": {
     "extends": [
